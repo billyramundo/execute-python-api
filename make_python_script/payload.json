@@ -1,0 +1,1 @@
+{"script": "def main():\n    arr = np.array([1, 2, 3, 4, 5])\n    mean_value = np.mean(arr)\n    return {\"mean\": mean_value}\n"}
