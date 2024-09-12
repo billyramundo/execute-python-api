@@ -20,6 +20,10 @@
 ### Example request:
 The markdown syntax causes problems if I try to directly place a script here in the curl request, so you can use the make_python_script directory in this project to make your own.
 
-Just write a python script in the script.py file (or there is an example there already). Then run the create_request.py file, which will output correctly formatted json to the payload.json file. Then you can run the below command (from the same directory) to try out the service. 
+Just write a python script in the script.py file (or there is an example there already). Then run the create_request.py file, which will output correctly formatted json to the payload.json file. Then you can run the below command to try out the service. You must be in the make_python_script directory for this command to work as-is (you will have to change the path to payload.json otherwise)
 
+#### Local testing:
 curl -X POST http://127.0.0.1:8080/execute -H "Content-Type: application/json" --data @payload.json
+
+#### Publicly Accessible Google Cloud Run Service:
+curl -X POST https://execute-python-868716487270.us-central1.run.app/execute -H "Content-Type: application/json" --data @payload.json
